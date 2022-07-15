@@ -1,0 +1,138 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: max-content;
+  grid-gap: 20px;
+  padding: 20px 20px 40px;
+  min-height: calc(100vh - 332px);
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 32px;
+    padding: 60px 32px;
+    min-height: calc(100vh - 295px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 32px;
+    column-gap: 16px;
+  }
+}
+
+.movie-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.movie-card__link {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.movie-card__image {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 5px;
+  transition: all 250ms;
+
+  @media screen and (min-width: 768px) {
+    height: 455px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    height: 574px;
+  }
+
+  &:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.02);
+  }
+}
+
+.movie-card__title {
+  color: #000;
+  margin-top: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: calc(16 / 12);
+  flex-grow: 1;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 8px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-top: 12px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: calc(24 / 20);
+  }
+}
+
+.movie-card__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  
+  @media screen and (min-width: 768px) {
+    font-size: 10px;
+  }
+}
+
+.movie-card__info {
+  color: #FF6B08;
+  font-size: 12px;
+  text-transform: none;
+  font-weight: 500;
+  margin-top: 0;
+  
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+.movie-card__rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.movie-card__rating-icon {
+  width: 12px;
+  height: 12px;
+  background-image: url(/src/images/svg/star.svg);
+  background-size: contain;
+  @media screen and (min-width: 1280px) {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.movie-card__rating-number {
+  color: #FF6B08;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 0 8px;
+  border-radius: 5px;
+
+  @media screen and (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
+
+// ----- WARNING IMAGE STYLES ----
+
+.warning__no-results {
+  width: 200px;
+  opacity: 0.7;
+  filter: invert(100%);
+}
+

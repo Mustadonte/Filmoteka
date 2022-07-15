@@ -1,0 +1,83 @@
+<header class="header js-header header-bg">
+  <div class="container header__container animate__animated animate__fadeInDown">
+    <div class="header__sections">
+      <!-- ========== NAVIGATION ========== -->
+      <nav class="site-nav js-site-nav">
+        <a class="link logo js-logo" href="" lang="en">
+          <svg class="logo__icon" width="24" height="24">
+            <use href="/src/images/svg/sprite.svg#icon-film"></use>
+          </svg>
+          <span class="logo__title">Filmoteka</span>
+        </a>
+        <ul class="list site-list">
+          <li class="site-list__item">
+            <a class="link site-list__link js-home_page current" href="" id="home">Home</a>
+          </li>
+          <li class="site-list__item">
+            <a class="link site-list__link js-lib_page" href="" id="my-lib">My Library</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- ========== FORM on HOME_PAGE ========== -->
+      <a href class="modal-auth__btn-open"></a>
+      <form class="search-form js-search-form" id="search-form">
+        <label class="search-form__switch">
+          <input type="checkbox" class="search-form__checkbox">
+          <span class="slider round"></span>
+        </label>
+        <select id="external-source" name="external-source" class="search-form__external-source visually-hidden">
+          <option class="search-form__external-source--option" value="imdb_id" selected>IMDB</option>
+          <option class="search-form__external-source--option" value="freebase_mid">Freebase</option>
+          <option class="search-form__external-source--option" value="facebook_id">Facebook</option>
+          <option class="search-form__external-source--option" value="twitter_id">Twitter</option>
+          <option class="search-form__external-source--option" value="instagram_id">Instagram</option>
+        </select>
+        <input type="text" name="search" autocomplete="off" class="search-form__field js-search-input"
+          placeholder="Movie search" />
+        <button type="submit" class="search-btn" aria-label="search button">
+          <svg class="search__icon" width="12" height="12">
+            <use href="/src/images/svg/sprite.svg#icon-search"></use>
+          </svg>
+        </button>
+      </form>
+      <!-- ========== BUTTONS on LIBRARY_PAGE ========== -->
+      <div class="buttons js-buttons visually-hidden">
+        <button class="button_lib btn_watched js-btn_watched" data-libType="watched" type="button">
+          Watched
+        </button>
+        <button class="button_lib btn_queue js-btn_queue" type="button" data-libType="queue">
+          Queue
+        </button>
+      </div>
+    </div>
+    <!-- ========== DARK/LIGHT THEME ========== -->
+
+    <div class="switcher">
+      <div class="th-switch">
+        <svg class="th-switch__icon" aria-label="sun-icon">
+          <use href="./images/svg/sprite.svg#icon-sun"></use>
+        </svg>
+        <div class="th-switch__control">
+          <input class="th-switch__toggle" type="checkbox" name="theme" id="th-sw-toggle" aria-label="switcher" />
+          <label aria-hidden="true" class="th-switch__track" for="th-sw-toggle"> </label>
+          <div aria-hidden="true" class="th-switch__marker"></div>
+        </div>
+        <svg class="th-switch__icon" aria-label="moon-icon">
+          <use href="./images/svg/sprite.svg#icon-moon"></use>
+        </svg>
+      </div>
+    </div>
+    <!-- ========== LANGUAGE MENU ============-->
+    <!-- <div class="lang-menu" action="">
+      <ul class="lang-form__select">
+        <li class="lang-form__option" value="">ENG</li>
+        <li class="lang-form__option" value="">UKR</li>
+      </ul>
+    </div> -->
+    <!-- ========== WARNINGS ========== -->
+    <div class="js-warn header-warn"></div>
+    <div class="js-search-res header-warn">
+      Search result not successful. Enter the correct movie name
+    </div>
+  </div>
+</header>

@@ -1,0 +1,39 @@
+{
+  "name": "filmoteka",
+  "version": "2.0.0",
+  "description": "",
+  "homepage": "https://AndreyHerzhov.github.io/Filmoteka",
+  "scripts": {
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /Filmoteka/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndreyHerzhov/Filmoteka.git"
+  },
+  "keywords": [],
+  "author": "Andrii Herzhov <andreyherzhov@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AndreyHerzhov/Filmoteka/issues"
+  },
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^0.27.2",
+    "basiclightbox": "^5.0.4",
+    "firebase": "^9.8.4",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.5",
+    "simplelightbox": "^2.10.3"
+  },
+  "devDependencies": {
+    "@parcel/transformer-inline-string": "^2.6.0",
+    "@parcel/transformer-sass": "^2.6.0",
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead"
+}
